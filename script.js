@@ -5,35 +5,32 @@ jQuery(document).ready(function ($) {
 
     $("#search-btn").on("click", function () {
         //setting everything fresh
-        var userInput;
         var searchTerm = $("#search-term").val();    
-        var noRecords = $("#no-records").val();
+        // var noRecords = $("#no-records").val();
         var startYear = $("#start-year").val();
         var endYear = $("#end-year").val();
 
         //building user search into url
         if (searchTerm) {
-            debugger;
-            userInput = queryURL + "&q=" + searchTerm;
+            queryURL + "&q=" + searchTerm;
             
         }
-        if (noRecords) {
-            queryURL + noRecords;
-        }
+        // if (noRecords) {
+        //     queryURL + noRecords;
+        // }
         if (startYear) {
-            queryURL + searchTerm;
+            queryURL + "&begin_date=" + startYear;
         }
         if (endYear) {
-            queryURL + searchTerm;
+            queryURL + "&end_date=" + endYear;
         }
 
         //calling ap
         $.ajax({
-            url: userInput,
+            url: queryURL,
             method: "GET"
         })
             .then(function (response) {
-                debugger;
                 console.log(response);
             });
     });
