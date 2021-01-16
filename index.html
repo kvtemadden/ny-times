@@ -18,6 +18,32 @@
         <div class="jumbotron">
             <h1 id="title"> <i class="far fa-newspaper"></i> New York Times Search</h1>
         </div>
+
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Search Term</label>
+              <input type="email" class="form-control" id="search-term" placeholder="example">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Number of Records to Retrieve</label>
+                <input type="email" class="form-control" id="no-records" placeholder="e.g. 10">
+            </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Start Year (optional)</label>
+                <input type="email" class="form-control" id="start-year" placeholder="e.g. 2020">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlInput1">End Year (optional)</label>
+                <input type="email" class="form-control" id="end-year" placeholder="e.g. 2021">
+              </div>
+
+              <button id="search-btn" class="btn btn-primary">Search</button>
+              <button id="search-btn" class="btn btn-primary">Clear Results</button>
+
+          </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
