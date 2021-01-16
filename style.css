@@ -1,6 +1,10 @@
+body {
+    background-color: rgb(204, 197, 197) ;
+}
+
 #title {
     text-align: center;
 }
 .jumbotron {
-    background-color: blue;
+    background-color: rgb(139, 168, 161);
 }
